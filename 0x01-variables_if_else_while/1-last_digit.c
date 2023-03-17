@@ -24,7 +24,7 @@ int main(void)
 	}
 	else
 	{
-		printf("Last digit of %i is %i", n, n % 10);
+		printf("Last digit of %i is %i ", n, n % 10);
 		printf("and is less than %i and not %i\n", 6, 0);
 	}
 	return (0);
