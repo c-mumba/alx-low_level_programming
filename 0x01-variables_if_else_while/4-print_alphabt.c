@@ -10,8 +10,8 @@
 int main(void)
 {
 	int x;
-	int t 
-	for(t = 'a'; x <= 'z'; t++)
+	int t; 
+	for(t = 'a'; t <= 'z'; t++)
 	{
 		putchar(t);
 	}
