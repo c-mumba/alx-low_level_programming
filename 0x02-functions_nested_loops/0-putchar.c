@@ -1,9 +1,5 @@
-#include <stdlib.h>
+#include "main.h"
 #include <stdio.h>
-#include <time.h>
-#include <ctype.h>
-#include <unistd.h>
-
 
 
 /**
