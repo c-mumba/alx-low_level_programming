@@ -1,2 +1,2 @@
-int _putchar(char):
-int main(int);
+int _putchar(char c);
+int main(void);
