@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * int _isalpha - Short description, single line
+ * _isalpha - Short description, single line
  * @c: Description of parameter x
  * Return: 0 or 1
  */
