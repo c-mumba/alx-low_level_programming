@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_sign - Short description, single line
+ * times_table - Short description, single line
  * Return: 0 or 1 or -1
  */
 
 void times_table(void)
 {
 	int rone, cone, d;
-	
+
 	for (rone = 0; rone <= 9; rone++)
 	{
 		_putchar('0');
