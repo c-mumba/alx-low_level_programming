@@ -1,56 +1,40 @@
 #include "main.h"
-/**
- * times_table - Short description, single line
- * Return: 0 or 1 or -1
- * Print_long - print long character values
- * Return: char values
- */
 
-void print_long(int value)
-{
-	if(value != 0)
-	{
-		print_long(value/10);
-		_putchar((value%10) + '0');
-	}
-}
+/**
+ * print_sign - Short description, single line
+ * Return: 0 or 1 or -1
+ */
 
 void times_table(void)
 {
-	int fst = 0, snd, soln;
-
-	while (fst <= 9)
+	int rone, cone, d;
+	
+	for (rone = 0; rone <= 9; rone++)
 	{
-		snd = 0;
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
 
-		while (snd <= 9)
+		for (cone = 1; cone <= 9; cone++)
 		{
-			soln = fst * snd;
-			
-			if (soln <= 9)
-			{
-				_putchar(soln + '0');
+			d = (rone * cone);
 
-				if (snd != 9)
-				{
-					_putchar(',');
-				}
-				_putchar(' ');
-				_putchar(' ');
+			if ((d / 10) > 0)
+			{
+				_putchar((d / 10) + '0');
 			}
 			else
 			{
-				print_long(soln);
-
-				if (snd != 9)
-				{
-					_putchar(',');
-				}
 				_putchar(' ');
 			}
-			snd++;
+			_putchar((d % 10) + '0');
+
+			if (cone < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
-		fst++;
 		_putchar('\n');
 	}
 }
