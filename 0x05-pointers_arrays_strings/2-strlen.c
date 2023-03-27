@@ -2,14 +2,17 @@
 /**
  * _strlen - find length of a string
  * @s: string parameter
- * return: string 
+ * Return: sreturn tring
  */
 
 int _strlen(char *s)
 {
+
 	char *p = s;
+
 	int str_len = 0;
-	while ( *p != '\0')
+
+	while (*p != '\0')
 	{
 		str_len++;
 		p++;
