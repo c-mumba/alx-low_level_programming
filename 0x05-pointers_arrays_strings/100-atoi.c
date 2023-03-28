@@ -14,12 +14,13 @@ int _atoi(char *s)
 	int sign = 1;
 	int counter = 0;
 	int i;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 
 		if (s[i] <= '9' && s[i] >= '0')
 		{
-			num = num * 10 + ((int)s[i] - 48);
+			num = num * 10 + (s[i] - 48);
 
 			if (counter == 0 && i != 0)
 			{
