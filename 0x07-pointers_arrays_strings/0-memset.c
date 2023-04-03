@@ -4,7 +4,7 @@
  * _memset - memset function
  * @s: s
  * @b: b
- * @b: n
+ * @n: n
  * Return: Description of the returned value
  */
 
