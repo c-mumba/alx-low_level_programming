@@ -9,7 +9,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int counter, i, tester;
+	int counter, i;
 	char *ptr;
 
 	counter = 0;
