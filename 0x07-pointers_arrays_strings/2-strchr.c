@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strchr - strchr function
  * @s: s
