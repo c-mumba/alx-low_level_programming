@@ -1,6 +1,23 @@
 #include "main.h"
 
 /**
+ * _strlen_recursion - Short description, single line
+ * @s: Description of parameter x
+(* a blank line
+ * Description: Longer description of the function)?
+(* section header: Section description)*
+ * Return: Description of the returned value
+ */
+int _strlen_recursion(char *s)
+{
+	if (*(s) == '\0')
+	{
+		return (0);
+	}
+	return (1 + _strlen_recursion(s + 1));
+}
+
+/**
  * is_palindrome1 - Short description, single line
  * @a: Description of parameter x
  * @l: Description of parameter x
@@ -9,7 +26,6 @@
 (* section header: Section description)*
  * Return: Description of the returned value
  */
-
 
 int is_palindrome1(char *a, int l)
 {
@@ -35,11 +51,9 @@ int is_palindrome1(char *a, int l)
 
 int is_palindrome(char *s)
 {
-	int counter = 0;
+	int counter;
 
-	while (s[counter] != '\0')
-	{
-		counter++;
-	}
+	counter = _strlen_recursion(s);
+
 	return (is_palindrome1(s, counter - 1));
 }
