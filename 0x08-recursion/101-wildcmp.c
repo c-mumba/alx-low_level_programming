@@ -11,10 +11,6 @@
 
 int wildcmp(char *s1, char *s2)
 {
-	if (s1 == "holberton.c" && s2 == "*.c")
-	{
-		return (1);
-	}
 	if (*s2 != *s1)
 	{
 		if (*s2 == '*')
