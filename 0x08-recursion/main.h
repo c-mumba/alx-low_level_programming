@@ -3,6 +3,7 @@
 
 
 int _putchar(char c);
+int is_prime_number2(int a, int b);
 int _sqrt_recursion2(int a, int b);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
