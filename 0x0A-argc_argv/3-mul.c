@@ -12,11 +12,13 @@
 
 int main(int argc, char **argv)
 {
+	int soln;
 	if (argc == 1 || argc == 0)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
-	return (argc * 0);
+	soln = atoi(argv[1]) * atoi(argv[2]);
+	printf("%d\n", soln);
+	return (0);
 }
