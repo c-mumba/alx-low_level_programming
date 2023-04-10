@@ -12,13 +12,18 @@
 
 int main(int argc, char **argv)
 {
-	int soln;
+	int i;
+
+	int soln = 1;
+
 	if (argc == 1 || argc == 0)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	soln = atoi(argv[1]) * atoi(argv[2]);
+
+	for (i = 1; i < 3; i++)
+		soln *= atoi(argv[i]);
 	printf("%d\n", soln);
 	return (0);
 }
