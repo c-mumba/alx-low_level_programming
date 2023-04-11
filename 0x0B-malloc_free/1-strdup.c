@@ -15,7 +15,14 @@ char *_strdup(char *str)
 {
 	char *ptr1;
 
-	ptr1 = (char *)malloc(sizeof(str) + 5);
+	unsigned int counter = 0;
+
+	while (str[counter] != '\0')
+	{
+		counter++;
+	}
+
+	ptr1 = (char *)malloc(counter * sizeof(char) + 1);
 
 	if (ptr1 == NULL || str == NULL)
 	{
