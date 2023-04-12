@@ -1,27 +1,57 @@
+#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * alloc_grid - Short description, single line
+ * @width: Description of parameter x
+(* @height: Description of parameter x
+ * Description: Longer description of the function)?
+(* section header: Section description)*
+ * Return: Description of the returned value
+ */
 
 int **alloc_grid(int width, int height)
 {
-    if (width <= 0 || height <= 0)
-    {
-        return (NULL);
-    }
-    int **ptr1;
-    unsigned int len = (width * height)  + 1, i, a, b;
-    ptr1 = (int **)malloc(len);
+	int **ptr1;
+	int *p2;
+	int i, j, k;
 
-    if (ptr1 == NULL)
-    {
-        return (NULL);
-    }
+	if (width <= 0 || height <= 0)
+	{
+		return (NULL);
+	}
 
-    for (i = 0; i < len; i++)
-    {
-        ptr1[i] = 0;
-        printf("ptr1[%i] = %i\n",i,ptr1[0][1]);
-    }
-    printf("ptr[1] = %i && len = %i\n",ptr1[1][1],len);
+	ptr1 = (int **)malloc(height * sizeof(int *));
 
-    return (ptr1[width][height]);
+	if (ptr1 == NULL)
+	{
+		return (NULL);
+	}
+	p2 = (int *)malloc((width * sizeof(int)));
+
+	if (p2 == NULL)
+	{
+		free(p2);
+		return (NULL);
+	}
+
+	for (k = 0; k < height; k++)
+	{
+		ptr1[k] = (int *)malloc(width * sizeof(int));
+		if (ptr1[k] == NULL)
+		{
+			free(ptr1);
+			return (NULL);
+		}
+	}
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			ptr1[i][j] = 0;
+		}
+	}
+	return (ptr1);
 }
 
