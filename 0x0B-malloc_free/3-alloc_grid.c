@@ -28,20 +28,17 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	p2 = (int *)malloc((width * sizeof(int)));
-
-	if (p2 == NULL)
-	{
-		free(p2);
-		free(ptr1);
-		return (NULL);
-	}
 
 	for (k = 0; k < height; k++)
 	{
 		ptr1[k] = (int *)malloc(width * sizeof(int));
 		if (ptr1[k] == NULL)
 		{
+			for (k = 0; k < height; k++)
+			{
+				p2 = ptr1[k];
+				free(p2);
+			}
 			free(ptr1);
 			return (NULL);
 		}
