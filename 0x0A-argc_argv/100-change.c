@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	int change, counter;
 
 	counter = 0;
-	if (argc != 2)
+	if (argc < 2)
 	{
 		printf("Error\n");
 		return (1);
