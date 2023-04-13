@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 		{
 			change = change - 2;
 		}
-		else
+		else if (change >= 1)
 		{
 			change = change - 1;
 		}
