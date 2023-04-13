@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
+	change = atoi(argv[1]);
 	for (counter = 0; change > 0; counter++)
 	{
 		if (change >= 25)
@@ -45,7 +46,6 @@ int main(int argc, char **argv)
 		{
 			change = change - 1;
 		}
-		counter++;
 	}
 	printf("%d\n", counter);
 	return (0);
