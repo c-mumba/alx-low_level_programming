@@ -35,7 +35,7 @@ void print_string(va_list ap)
 
 	if (!s)
 		s = "(nil)";
-	printf("%s", va_arg(ap, s);
+	printf("%s", s);
 }
 
 /**
