@@ -31,14 +31,7 @@ void print_char(va_list ap)
 
 void print_string(va_list ap)
 {
-	char *s = va_arg(ap, char *);
-
-	if (!s)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", s);
+	printf("%s", va_arg(ap, char *));
 }
 
 /**
