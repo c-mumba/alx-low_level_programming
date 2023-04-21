@@ -31,7 +31,14 @@ void print_char(va_list ap)
 
 void print_string(va_list ap)
 {
-	printf("%s", va_arg(ap, char *));
+	char *s = va_arg(ap, char *);
+
+	if (!s)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", s);
 }
 
 /**
@@ -53,6 +60,7 @@ void print_float(va_list ap)
 void print_all(const char * const format, ...)
 {
 	int counter1, counter2;
+	char *p = "", *q = ", ";
 
 	type1 arr1[] = {
 		{'c', print_char},
@@ -61,7 +69,7 @@ void print_all(const char * const format, ...)
 		{'s', print_string},
 		{'\0', NULL}
 	};
-	char x[] = ", ";
+
 	va_list ap;
 
 	va_start(ap, format);
@@ -74,9 +82,9 @@ void print_all(const char * const format, ...)
 		{
 			if (arr1[counter2].a == format[counter1])
 			{
+				printf("%s", p);
 				arr1[counter2].f(ap);
-				if (format[counter1 + 1] != '\0')
-					printf("%s", x);
+				p = q;
 			}
 			counter2++;
 		}
