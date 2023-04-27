@@ -12,7 +12,7 @@
 size_t print_list(const list_t *h)
 {
 	const list_t *ap = h;
-	size_t counter = 0;
+	unsigned int  counter = 0;
 
 	while (ap != NULL)
 	{
