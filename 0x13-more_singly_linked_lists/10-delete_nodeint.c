@@ -9,13 +9,23 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int counter = 0;
+	unsigned int counter = 0, counter1 = 0;
 	listint_t *prev_node = NULL;
 	listint_t *next_node = NULL;
 	listint_t *current_node = NULL;
+	listint_t *count = *head;
 
 	if (*head == NULL || head == NULL)
 		return (-1);
+	while (count->next != NULL)
+	{
+		count = count->next;
+		counter1++;
+	}
+	counter++;
+	if (index > counter1)
+		return (-1);
+
 	if (index == 0)
 	{
 		current_node = (*head)->next;
